@@ -1,0 +1,48 @@
+GIVEN a player can choose to set a monthly deposit limit monthly to prevent themself from depositing more than than the limit in a rolling 30-day period
+AND a player can choose to set a weekly deposit limit monthly to prevent themself from depositing more than than the limit in a rolling 7-day period
+AND a player can choose to set a daily deposit limit monthly to prevent themself from depositing more than than the limit in a rolling 1-day period
+WHEN the program is run
+THEN prompt the user to input a value, convert it to a float and call it daily_input   
+    IF the input is a string that won't convert to a float
+        throw an exception("Please enter a number") and prompt again
+    ELSE IF the input is a negative number
+        display an error ("Please enter a positive number minimum 10.00") and prompt again
+    ELSE IF the input is a above 0 but less than 10
+        display an error ("the minimum is 10.00) and prompt again
+    ELSE IF the input is above 10 but less then max_deposit
+        create daily_limit and set it to the value inputted into daily_input
+    ELSE IF the input is empty OR zero
+        continue to the next prompt 
+THEN prompt the user to input a value, convert it to a float and call it weekly_input   
+    IF the input is a string that won't convert to a float
+        throw an exception("Please enter a number") and prompt again
+    ELSE IF the input is a negative number
+        display an error ("Please enter a positive number minimum 10.00") and prompt again
+    ELSE IF the input is a above 0 but less than 10
+        display an error ("the minimum is 10.00) and prompt again
+    ELSE IF the input is above 10 but less then max_deposit
+        create weekly_limit and set it to the value inputted into weekly_input
+    ELSE IF the input is empty OR zero
+        continue to the next prompt 
+THEN prompt the user to input a value, convert it to a float and call it monthly_input
+    IF the input is a string that won't convert to a float
+        throw an exception("Please enter a number") and prompt again
+    ELSE IF the input is a negative number
+        display an error ("Please enter a positive number minimum 10.00") and prompt again
+    ELSE IF the input is a above 0 but less than 10
+        display an error ("the minimum is 10.00) and prompt again
+    ELSE IF the input is above 10 but less then max_deposit
+        create monthly_limit and set it to the value inputted into monthly_input
+    ELSE IF the input is empty OR zero
+        continue to the next prompt
+
+
+AND save the values as daily_limit, weekly_limit and monthly_limit
+AND print daily_limit, weekly_limit and monthly_limit to the console
+
+
+AND the minimum limit is 10.00.
+AND none of the limits are required.
+AND the minimum deposit is 10.00.
+AND the maximum deposit is 50000.00.
+
